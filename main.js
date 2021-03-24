@@ -7,13 +7,13 @@ let priceChangeText = document.getElementById("priceChange");
 
 if(kuakaValue < kuakaValuePrevious) {
     valueText.innerHTML = `Kuaka Coin Value in USD: $${Notate(kuakaValue)}`;
-    priceChangeText.innerHTML = `Price Change Over 10 Seconds: -$${Notate(kuakaValuePrevious - kuakaValue)}`
+    priceChangeText.innerHTML = `Price Change Over 10 Seconds: -${Notate(kuakaValuePrevious / kuakaValue)}%`
     if(priceChangeText.classList.contains("green")) priceChangeText.classList.remove("green");
     priceChangeText.classList.add("red");
 }
 if(kuakaValue > kuakaValuePrevious) {
     valueText.innerHTML = `Kuaka Coin Value in USD: $${Notate(kuakaValue)}`;
-    priceChangeText.innerHTML = `Price Change Over 10 Seconds: +$${Notate(kuakaValue - kuakaValuePrevious)}%`
+    priceChangeText.innerHTML = kuakaValuePrevious > 0 ? `Price Change Over 10 Seconds: +${Notate(kuakaValue / kuakaValuePrevious)}%` : `Price Change Over 10 Seconds: +${Notate(kuakaValue / kuakaValue)}%`;
     if(priceChangeText.classList.contains("red")) priceChangeText.classList.remove("red");
     priceChangeText.classList.add("green");
 }
@@ -28,13 +28,13 @@ window.setInterval( function(){
 
     if(kuakaValue < kuakaValuePrevious) {
         valueText.innerHTML = `Kuaka Coin Value in USD: $${Notate(kuakaValue)}`;
-        priceChangeText.innerHTML = `Price Change Over 10 Seconds: -$${Notate(kuakaValuePrevious - kuakaValue)}`
+        priceChangeText.innerHTML =  `Price Change Over 10 Seconds: -${Notate(kuakaValuePrevious / kuakaValue)}%`
         if(priceChangeText.classList.contains("green")) priceChangeText.classList.remove("green");
         priceChangeText.classList.add("red");
     }
     if(kuakaValue > kuakaValuePrevious) {
         valueText.innerHTML = `Kuaka Coin Value in USD: $${Notate(kuakaValue)}`;
-        priceChangeText.innerHTML = `Price Change Over 10 Seconds: +$${Notate(kuakaValue - kuakaValuePrevious)}%`
+        priceChangeText.innerHTML = kuakaValuePrevious > 0 ? `Price Change Over 10 Seconds: +${Notate(kuakaValue / kuakaValuePrevious)}%` : `Price Change Over 10 Seconds: +$${Notate(kuakaValue / kuakaValue)}%`;
         if(priceChangeText.classList.contains("red")) priceChangeText.classList.remove("red");
         priceChangeText.classList.add("green");
     }
