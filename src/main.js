@@ -1,3 +1,4 @@
+if(data.currentPrice.eq(D(0)))
 data.previousPrice = data.currentPrice;
 data.currentPrice = getRandom(D(10), D(1e6))
 
