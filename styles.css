@@ -4,6 +4,8 @@
     color: white;
 
     align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 .red {
