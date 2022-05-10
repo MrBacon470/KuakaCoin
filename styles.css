@@ -1,7 +1,7 @@
 * {
     font-family: 'Inconsolata', monospace;
     background: black;
-    color: white;
+    color: whitesmoke;
 
     align-items: center;
     align-content: center;
@@ -9,9 +9,21 @@
 }
 
 .red {
-    color: red;
+    color: rgb(217, 28, 28);
 }
 
 .green {
-    color: green;
+    color: rgb(39, 168, 39);
+}
+
+button {
+    font-size: 1em;
+    border: 2px solid whitesmoke;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    background: whitesmoke;
+    color: black;
+    transition-duration: 0.5s;
 }

@@ -2,10 +2,11 @@ const D = x => new Decimal(x)
 //create all the variables in a data object for saving
 function getDefaultObject() {
     return {
-        money: D(1e3),
+        money: D(1e6),
         coins: D(0),
         previousPrice: D(0),
-        currentPrice: D(0)
+        currentPrice: D(0),
+        buyAmount: 0,
     }
 }
 let data = getDefaultObject()
@@ -55,8 +56,6 @@ window.setInterval(function(){
 }, 10000);
 window.onload = function (){
     load()
-    generateEventHandlers()
-    console.log("EventListeners Initialized.")
 }
 //full reset
 function fullReset(){
